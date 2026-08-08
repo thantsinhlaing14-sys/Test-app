@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide Robot Admin</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="admin-body">
+    <main class="admin-shell">
+        <section class="admin-panel">
+            <div>
+                <p class="admin-kicker">Guide Robot Admin</p>
+                <h1>Control Panel</h1>
+            </div>
+
+            <div class="mode-control" role="group" aria-label="Language mode">
+                <button class="mode-button active" type="button" data-mode="en">English</button>
+                <button class="mode-button" type="button" data-mode="mm">Myanmar</button>
+            </div>
+
+            <form id="prompt-form" class="prompt-form">
+                <label for="prompt-input">Text input</label>
+                <textarea id="prompt-input" rows="7" placeholder="Type English or Burmese text for the selected mode."></textarea>
+                <button type="submit">Send to robot</button>
+            </form>
+
+            <div id="admin-status" class="admin-status">Ready.</div>
+        </section>
+    </main>
+
+    <script src="/static/admin.js"></script>
+</body>
+</html>
