@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Guide Robot Demo</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <main id="display-area">
+        <div class="display-header">
+            <div class="display-header-left">
+                <div class="robot-indicator">
+                    <span class="pulse-ring"></span>
+                    <span class="pulse-dot"></span>
+                </div>
+                <span class="display-label">Guide Robot Offline Demo</span>
+            </div>
+            <div class="display-header-right">
+                <button type="button" id="speaker-toggle" class="header-link speaker-toggle">Speaker: Laptop</button>
+                <a class="header-link" href="/local-ai">Local AI</a>
+                <span id="demo-state" class="demo-state">Ready</span>
+            </div>
+        </div>
+
+        <section class="stream-container">
+            <div id="stream-output">Guide Robot Online. Select a demo interaction.</div>
+            <span class="stream-cursor" id="stream-cursor"></span>
+        </section>
+
+        <section class="demo-controls" aria-label="Demo interactions">
+            {% for interaction in interactions %}
+            <button type="button" class="demo-action-btn" data-interaction-id="{{ interaction.id }}">
+                <span class="demo-action-title">{{ interaction.label }}</span>
+            </button>
+            {% endfor %}
+        </section>
+    </main>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
+
